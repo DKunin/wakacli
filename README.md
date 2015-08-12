@@ -26,11 +26,6 @@ Configure your API_KEY, you can find it [Here](https://wakatime.com/settings/acc
 
 ```
 
-## Todo 
-
-- add simple loader or smth...
-- add colors or 
-
 ## License
 
 MIT © [Dmitri Kunin](http://dkun.in)

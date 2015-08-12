@@ -6,9 +6,13 @@ var request  = require('superagent');
 var prettyMs = require('pretty-ms');
 var R        = require('ramda');
 var nconf    = require('nconf');
+var Spinner  = require('cli-spinner').Spinner;
 var chalk    = require('chalk');
 var homedir  = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME;
 var wakafile = homedir + '/.wakacli.json';
+ 
+var spinner = new Spinner('getting info.. %s');
+spinner.setSpinnerString('|/-\\');
 
 nconf.argv()
      .env()
@@ -54,6 +58,7 @@ var getFullDuration = R.compose(prettyMs, R.multiply(1000), R.reduce(summDuratio
 
 function getHours(){
   return new Promise(function(resolve,reject){
+    spinner.start();
     request
       .get('https://wakatime.com/api/v1/summary/daily')
       .query({start:today, end: today, api_key: apiKey})
@@ -69,6 +74,7 @@ function getHours(){
 }
 
 function logInfo(data){
+  spinner.stop(true);
   console.log(chalk.red(data));
 }
 
