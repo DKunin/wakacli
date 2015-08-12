@@ -4,12 +4,9 @@
 
 ## Install
 
-clone this repo
-
-
 ```js
 
-  npm link
+  npm install wakacli -g
 
 ```
 
@@ -32,6 +29,7 @@ Configure your API_KEY, you can find it [Here](https://wakatime.com/settings/acc
 ## Todo 
 
 - add simple loader or smth...
+- add colors or 
 
 ## License
 
