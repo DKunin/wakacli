@@ -1,0 +1,23 @@
+{
+  "name": "wakacli",
+  "version": "0.1.0",
+  "description": "Simple cli tool to check amount of time coding",
+  "repository": "git@github.com:DKunin/wakacli.git",
+  "main": "index.js",
+  "scripts": {},
+  "author": "dkunin",
+  "license": "ISC",
+  "dependencies": {
+    "nconf": "^0.7.2",
+    "pretty-ms": "^2.0.0",
+    "ramda": "^0.17.1",
+    "superagent": "^1.3.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "wakacli": "./index.js"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "maxerr" : 15, 
+  "newcap": false,
+  "latedef": true,
+  "maxdepth": 3,
+  "browser": true,
+  "strict": true,
+  "curly": true,
+  "freeze": true,
+  "indent": 4,
+  "esnext": true,
+  "globals": {
+    "module": true,
+    "window": true,
+    "console": true,
+    "document": true,
+    "flux": true,
+    "FastClick": true,
+    "$": true,
+    "__dirname": true,
+    "describe": true,
+    "it": true,
+    "require": true
+  },
+  "globalstrict": true,
+  "quotmark": "single",
+  "undef": true,
+  "nonew": true,
+  "unused": true
+}
