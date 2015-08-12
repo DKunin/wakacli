@@ -6,10 +6,13 @@ var request  = require('superagent');
 var prettyMs = require('pretty-ms');
 var R        = require('ramda');
 var nconf    = require('nconf');
+var chalk    = require('chalk');
+var homedir  = (process.platform === 'win32') ? process.env.HOMEPATH : process.env.HOME;
+var wakafile = homedir + '/.wakacli.json';
 
 nconf.argv()
      .env()
-     .file({ file: './config.json' });
+     .file({ file: wakafile });
 
 var apiKey = nconf.get('apikey');
 var config = nconf.get('config');
@@ -65,4 +68,8 @@ function getHours(){
 
 }
 
-getHours().then(console.log).catch(console.log);
+function logInfo(data){
+  console.log(chalk.red(data));
+}
+
+getHours().then(logInfo).catch(logInfo);

@@ -8,6 +8,7 @@
   "author": "dkunin",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^1.1.0",
     "nconf": "^0.7.2",
     "pretty-ms": "^2.0.0",
     "ramda": "^0.17.1",
