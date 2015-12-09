@@ -19,6 +19,7 @@ nconf.argv()
 var apiKey = nconf.get('apikey');
 var config = nconf.get('config');
 var help   = nconf.get('help');
+var nospinner  = nconf.get('nospinner');
 
 if(help) {
   console.log('For configuring your api key - please run wakatime --config apikey=<YOUR_API_KEY>');
@@ -46,6 +47,9 @@ function logInfo(data){
   spinner.stop(true);
   console.log(chalk.red(data));
 }
-spinner.start(true);
+
+if(!nospinner) {
+  spinner.start(true);
+}
 
 getHours(apiKey).then(logInfo).catch(logInfo);

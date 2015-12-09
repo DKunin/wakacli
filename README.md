@@ -22,7 +22,9 @@ Configure your API_KEY, you can find it [Here](https://wakatime.com/settings/acc
 
 ```js
   
-    wakacli //2h 22m 10s
+    wakacli // Getting info >>> ... >>> 2h 22m 10s
+    
+    wakacli --nospinner //2h 22m 10s
 
 ```
 

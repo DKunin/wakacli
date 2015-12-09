@@ -1,6 +1,6 @@
 {
   "name": "wakacli",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Simple cli tool to check amount of time coding",
   "repository": "git@github.com:DKunin/wakacli.git",
   "main": "index.js",
