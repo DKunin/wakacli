@@ -14,7 +14,7 @@
     "pretty-ms": "^2.0.0",
     "ramda": "^0.17.1",
     "superagent": "^1.3.0",
-    "wakatoday": "^0.1.1"
+    "wakatoday": "0.2.2"
   },
   "engines": {
     "node": ">=0.8.0"
